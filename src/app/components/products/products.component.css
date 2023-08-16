@@ -7,7 +7,7 @@
     width: 18rem;
     margin-right: 10px; 
     padding: 20px;
-    margin: 50px;/* Add some margin between cards */
+    margin: 10px;/* Add some margin between cards */
     /* Other card styles */
   }
 
@@ -45,4 +45,74 @@
 
 .item a:hover {
   color: blue;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between;
+  gap: 20px; /* Add some gap between cards */
+}
+
+.card {
+  flex: 0 0 calc(25% - 20px); /* Adjust the width of each card based on the number of columns you want */
+  padding: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%; /* Make sure the image occupies the full width of the card */
+  height: auto;
+  max-height: 200px; /* Limit the image height to prevent distortion */
+  object-fit: cover;
+}
+
+.card h5,
+.card p {
+  margin: 10px 0; /* Add some space between text content */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card button {
+  display: block;
+  margin-top: auto; /* Push the button to the bottom of the card */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: .25rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Customize the snackbar style */
+/* Customize the success snackbar styles */
+.snackbar-success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Customize the error snackbar styles */
+.snackbar-error {
+  background-color: #f44336;
+  color: #fff;
+}
+/* Customize the success toast color */
+.toast-success {
+  background-color: #4caf50 !important;
+  color: #fff !important;
 }

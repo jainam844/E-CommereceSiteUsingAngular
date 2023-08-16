@@ -26,4 +26,6 @@ export class CartComponent implements OnInit {
   emtyCart(){
     this.cartservice.removeAllCart();
   }
+
+  
 }
